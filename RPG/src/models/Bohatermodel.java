@@ -36,8 +36,13 @@ public class Bohatermodel  implements Bohater {
 
     }
 
-    public static void Setkoniec(){
+    private String name;
+    public void Setkoniec(String s){
+        this.name = s;
+    }
 
+    public String getName() {
+        return this.name;
     }
 
 

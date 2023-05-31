@@ -22,7 +22,7 @@ public class RunController{
         String decision = scanner.nextLine();
 
         switch (decision) {
-            case "Bohater" ->{
+            case "Bohater" -> {
                 Bohatermodel bohatermodel = new Bohatermodel();
                 Bohater.welcome(decision);
                 Bohatermodel.breakLinie();
@@ -41,46 +41,48 @@ public class RunController{
                     System.out.println("zła klasa Bohatera. Prosze od nowa zrobić klase postać");
                     return;
                 }
-                Bohatermodel.setBroni(Broni);
+                String broni = null;
+                Bohatermodel.setBroni(broni);
                 System.out.println("Wybiesz swają broni(miecz,laska,łuk,włucznia,tarcza)");
                 String Broni = scanner.nextLine();
-                if (!isValidBroni(Broni)){
-                    System.out.println("Nieprawidłowy kolor włosów. Tworzenie postaci anulowane.");
+                if (!isValidBroni(Broni)) {
+                    System.out.println("Nieprawidłowy broni. Tworzenie postaci anulowane.");
                     return;
                 }
-                Bohatermodel.setZbroja(zbroja);
+                String Zbroja = null;
+                Bohatermodel.setZbroja(Zbroja);
                 System.out.println("wybiesz zbroje (ciężki, średni, lekki)");
-                String Zbroja = scanner.nextLine();
+                Zbroja = scanner.nextLine();
                 if (!isValidZbroja(Zbroja)) {
                     System.out.println("zła zbroja Bohatera. Prosze od nowa zrobić klase postać");
                     return;
                 }
-                Bohatermodel.setCharyzma(charyzma);
+                String Charyzma = null;
+                Bohatermodel.setCharyzma(Charyzma);
                 System.out.println("Wybiesz charyzme dla Bohatera (przywudczy, madry, hojny)");
                 String charyzma = scanner.nextLine();
                 if (!isValicharyzma(charyzma)) {
                     System.out.println("zła charyzma Bohatera. Prosze od nowa zrobić klase postać");
                     return;
                 }
+                String przeszlosc = null;
                 bohatermodel.setprzeszlosc(przeszlosc);
                 System.out.println("Wybiesz przeszłość swojego Bohatera (szkoła, farmer)");
-                String przeszlosc = scanner.nextLine();
-                if (!isValidprzeszlosc(przeszlosc)){
+                przeszlosc = scanner.nextLine();
+                if (!isValidprzeszlosc(przeszlosc)) {
                     System.out.println("zła zbroja Bohatera. Prosze od nowa zrobić klase postać");
                     return;
                 }
-                Bohatermodel.Setkoniec(Koniec);
+                String koniece = "test";
+                Bohatermodel.Setkoniec(koniece);
                 System.out.println("czy chcesz stworzyć postać (tak / nie)");
                 String confirmation = scanner.nextLine();
-                if (confirmation.equalsIgnoreCase("tak")){
+                if (confirmation.equalsIgnoreCase("tak")) {
                     System.out.println(Arrays.toString(bohatermodel.BohaterData()));
 
-                }else {
+                } else {
                     System.out.println("Tworzenie postaci anulowano");
                 }
-
-
-
 
 
             }
@@ -103,20 +105,23 @@ public class RunController{
                     System.out.println("zła klasa Złoczynicy. Prosze od nowa zrobić klase postać");
                     return;
                 }
+                String Broni = null;
                 Zloczynicamodel.setBroni(Broni);
                 System.out.println("Wybiesz swają broni(miecz,laska,łuk,noz,topor)");
-                String Broni = scanner.nextLine();
-                if (!isValidBroni(Broni)){
+                Broni = scanner.nextLine();
+                if (!isValidBroni(Broni)) {
                     System.out.println("Zła broni. tworzenie klasy anulowano.");
                     return;
                 }
+                String Zbroja = null;
                 Zloczynicamodel.setZbroja(Zbroja);
                 System.out.println("wybiesz zbroje (ciężki, średni, lekki)");
-                String Zbroja = scanner.nextLine();
+                Zbroja = scanner.nextLine();
                 if (!isValidZbroja(Zbroja)) {
                     System.out.println("zła zbroja Złoczynicy. Prosze od nowa zrobić klase postać");
                     return;
                 }
+                String Charyzma = null;
                 Zloczynicamodel.setcharyzma(Charyzma);
                 System.out.println("Wybiesz charyzme dla Zloczynicy (cwaniak, maadry, respekt)");
                 String charyzma = scanner.nextLine();
@@ -124,20 +129,22 @@ public class RunController{
                     System.out.println("zła zbroja Złoczynicy. Prosze od nowa zrobić klase postać");
                     return;
                 }
+                String przeszlosc = null;
                 Zloczynicamodel.setprzeszlosc(przeszlosc);
                 System.out.println("Wybiesz przeszłość swojego Bohatera (szkoła, farmer)");
-                String przeszlosc = scanner.nextLine();
-                if (!isValidprzeszlosc(przeszlosc)){
+                przeszlosc = scanner.nextLine();
+                if (!isValidprzeszlosc(przeszlosc)) {
                     System.out.println("zła zbroja Złoczynicy. Prosze od nowa zrobić klase postać");
                     return;
                 }
+                String koniec = null;
                 Zloczynicamodel.setkoniec(koniec);
                 System.out.println("czy chcesz stworzyć postać (tak / nie)");
                 String confirmation = scanner.nextLine();
-                if (confirmation.equalsIgnoreCase("tak")){
+                if (confirmation.equalsIgnoreCase("tak")) {
                     System.out.println(Arrays.toString(Zloczynica.ZloczynicaData()));
 
-                }else {
+                } else {
                     System.out.println("Tworzenie postaci anulowano");
                 }
 
